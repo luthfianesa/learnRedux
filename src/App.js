@@ -10,22 +10,30 @@ function App() {
   const { total } = useSelector((state) => state)
   console.log(total);
 
-  const handleNumPlus = () => {
-    setNum((prevState) => prevState + 1);
-  };
+  // const handleNumPlus = () => {
+  //   setNum((prevState) => prevState + 1);
+  // };
 
-  const handleNumMinus = () => {
-    setNum((prevState) => prevState - 1);
-  };
+  const handlePlus = () => {
+    setNum(num + 1)
+  }
+
+  // const handleNumMinus = () => {
+  //   setNum((prevState) => prevState - 1);
+  // };
+
+  const handleMinus = () => {
+    setNum(num - 1)
+  }
 
   return (
     <div className="app-container">
       <div className="increment-decrement-container">
         <div className="plus">
-          <button onClick={handleNumPlus}>+</button>
+          <button onClick={handlePlus}>+</button>
         </div>
         <div className="minus">
-          <button onClick={handleNumMinus}>-</button>
+          <button onClick={handleMinus}>-</button>
         </div>
       </div>
       <div className="num-container">
